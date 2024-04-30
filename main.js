@@ -1,10 +1,13 @@
-var login = document.getElementById('login').value;
-var senha = document.getElementById('senha').value;
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio do formulário padrão
 
-if (login == 'admim' && senha == 'admim') {
-  alert('sucesso');
-  location.href('Calculadora_DIFAL.html')
-  
-} else {
-  alert('Usuário ou senha incorretos');
-}
+    var login = document.getElementById('login').value;
+    var senha = document.getElementById('senha').value;
+
+    if (login === 'admin' && senha === 'admin') {
+        alert('Sucesso!');
+        window.location.href = 'Calculadora_DIFAL.html'; // Correção na forma de redirecionamento
+    } else {
+        alert('Usuário ou senha incorretos');
+    }
+});
