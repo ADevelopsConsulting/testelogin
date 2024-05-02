@@ -37,7 +37,7 @@ button {
     color: #fff;
     padding: .9em 2.20em;
     border-radius: 3em;
-    transition: background-color 0.4s, color 0.4s; /* Adicionando a propriedade de transição */
+    transition: background-color 1.0s, color 1.0s; /* Adicionando a propriedade de transição */
     cursor: pointer;
 }
 
