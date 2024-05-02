@@ -30,21 +30,18 @@ button {
     border-radius: 5px;
     box-sizing: border-box;
 }
-button {
-    background-color: #4caf50;
-    color: #fff;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #45a049;
-}
 
-/* Andev Web */
 .button {
     position: relative;
     background: var(--first-color);
     color: #fff;
     padding: .9em 2.20em;
     border-radius: 3em;
-    transition: .4s;
+    transition: background-color 0.4s, color 0.4s; /* Adicionando a propriedade de transição */
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #45a049;
+    color: #fff; /* Adicionando cor do texto ao estado hover */
 }
