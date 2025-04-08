@@ -24,17 +24,14 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
         return;
     }
 
-    // Validacao de e-mail simples
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
         mostrarMensagem('Por favor, insira um e-mail valido.', false);
         return;
     }
 
-    // Carrega usuarios existentes
     let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    // Verifica se o usuario ou e-mail ja existe
     if (usuarios.some(u => u.usuario === usuario)) {
         mostrarMensagem('Este usuario ja esta cadastrado.', false);
         return;
@@ -44,19 +41,16 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
         return;
     }
 
-    // Salva o novo usuario
     const usuarioData = { nome, email, usuario, senha };
     usuarios.push(usuarioData);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-    // Exibe mensagem de sucesso e redireciona
     mostrarMensagem('Cadastro realizado com sucesso. Redirecionando...', true);
     setTimeout(() => {
         window.location.href = 'index.html';
     }, 2000);
 });
 
-// Funcao para mostrar mensagens de erro ou sucesso
 function mostrarMensagem(texto, sucesso) {
     const mensagem = document.getElementById('mensagem');
     mensagem.textContent = texto;
