@@ -10,17 +10,18 @@
 <body>
     <div class="container">
         <h2>Login</h2>
+        <div id="mensagem" class="mensagem"></div>
         <form id="loginForm">
             <div class="input-group">
-                <input type="text" id="login" placeholder="Usuário" required>
+                <input type="text" id="usuario" placeholder="Usuário" required>
             </div>
-            <div class="input-group">
+            <div class="input-group password-group">
                 <input type="password" id="senha" placeholder="Senha" required>
+                <span class="toggle-password" onclick="togglePassword('senha', this)">👁️</span>
             </div>
             <button type="submit" class="btn">Entrar</button>
         </form>
-        <p class="recuperar-link"><a href="eculperar-senha.html">Esqueceu a senha?</a></p>
-        <p class="cadastro-link">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+        <p class="login-link">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
     </div>
     <script src="main.js"></script>
 </body>
