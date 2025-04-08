@@ -10,6 +10,7 @@
 <body>
     <div class="container">
         <h2>Cadastro</h2>
+        <div id="mensagem" class="mensagem"></div>
         <form id="cadastroForm">
             <div class="input-group">
                 <input type="text" id="nome" placeholder="Nome" required>
@@ -22,13 +23,15 @@
             </div>
             <div class="input-group password-group">
                 <input type="password" id="senha" placeholder="Senha" required>
+                <span class="toggle-password" onclick="togglePassword('senha', this)">👁️</span>
             </div>
             <div class="input-group password-group">
                 <input type="password" id="confirmaSenha" placeholder="Confirmar Senha" required>
+                <span class="toggle-password" onclick="togglePassword('confirmaSenha', this)">👁️</span>
             </div>
             <button type="submit" class="btn">Cadastrar</button>
         </form>
-        <p class="login-link">Já tem conta? <a href="index.html">Faça login</a></p>
+        <p class="login-link">Já tem conta? <a href="login.html">Faça login</a></p>
     </div>
     <script src="cadastro.js"></script>
 </body>
