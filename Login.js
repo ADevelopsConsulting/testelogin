@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   
   if (usuarioData && usuarioData.senha === senha) {
     alert('Sucesso!');
-    window.location.href = 'Calculadora_DIFAL.html';
+    window.location.href = 'menu.html';
   } else {
     alert('Usuário ou senha incorretos');
   }
