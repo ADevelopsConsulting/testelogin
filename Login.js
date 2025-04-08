@@ -12,7 +12,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   
   if (usuarioData && usuarioData.senha === senha) {
     alert('Sucesso!');
-    window.location.href = 'menu.html';
+    window.location.href = 'https://antonioalves1996.github.io/Calculadoras_Fiscais/';
   } else {
     alert('Usuario ou senha incorretos');
   }
