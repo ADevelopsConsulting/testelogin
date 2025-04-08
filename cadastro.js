@@ -49,10 +49,11 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
     usuarios.push(usuarioData);
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-    mostrarMensagem('Cadastro realizado com sucesso!', true);
+    // Exibe mensagem de sucesso e redireciona
+    mostrarMensagem('Cadastro realizado com sucesso! Redirecionando...', true);
     setTimeout(() => {
-        window.location.href = 'login.html';
-    }, 1000);
+        window.location.href = 'index.html'; // Mantido como login.html
+    }, 2000); // Aumentei para 2 segundos para dar tempo de ler a mensagem
 });
 
 // Função para alternar visibilidade da senha
@@ -74,8 +75,14 @@ function mostrarMensagem(texto, sucesso) {
     const mensagem = document.getElementById('mensagem');
     mensagem.textContent = texto;
     mensagem.style.display = 'block';
-    mensagem.className = 'mensagem' + (sucesso ? ' sucesso' : '');
-    setTimeout(() => {
-        mensagem.style.display = 'none';
-    }, 3000);
+    mensagem.className = 'mensagem' + (sucesso ? ' sucesso' : ' erro'); // Adicionei 'erro' para clareza
+    if (sucesso) {
+        setTimeout(() => {
+            mensagem.style.display = 'none';
+        }, 2000); // Ajustado para 2 segundos apenas no sucesso
+    } else {
+        setTimeout(() => {
+            mensagem.style.display = 'none';
+        }, 3000); // Mantido 3 segundos para erros
+    }
 }
