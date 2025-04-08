@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <div class="container">
         <h2>Login</h2>
         <form id="loginForm">
-            <input type="text" id="login" placeholder="Usuário">
-            <input type="password" id="senha" placeholder="Senha">
-            <button type="submit">Entrar</button>
+            <div class="input-group">
+                <input type="text" id="login" placeholder="Usuário" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="senha" placeholder="Senha" required>
+            </div>
+            <button type="submit" class="btn">Entrar</button>
         </form>
+        <p class="cadastro-link">Não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
     </div>
     <script src="main.js"></script>
 </body>
