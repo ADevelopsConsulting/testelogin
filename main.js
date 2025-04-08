@@ -1,13 +1,16 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Evita o envio do formulário padrão
-  
-  const login = document.getElementById('login').value;
-  const senha = document.getElementById('senha').value;
-  
-  if (login === 'admin' && senha === 'admin') {
-    alert('Sucesso!');
-    window.location.href = 'Calculadora_DIFAL.html';
-  } else {
-    alert('Usuário ou senha incorretos');
-  }
+    event.preventDefault();
+
+    const login = document.getElementById('login').value;
+    const senha = document.getElementById('senha').value;
+
+    // Verifica se o usuário existe no localStorage
+    const usuarioData = JSON.parse(localStorage.getItem('usuario_' + login));
+
+    if (usuarioData && usuarioData.senha === senha) {
+        alert('Sucesso!');
+        window.location.href = 'Calculadora_DIFAL.html';
+    } else {
+        alert('Usuário ou senha incorretos');
+    }
 });
