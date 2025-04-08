@@ -30,6 +30,19 @@ h2 {
     text-transform: uppercase;
 }
 
+.mensagem {
+    color: #fff;
+    background: rgba(255, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.mensagem.sucesso {
+    background: rgba(69, 160, 73, 0.7);
+}
+
 .input-group {
     position: relative;
     margin-bottom: 25px;
@@ -45,7 +58,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 12px 40px 12px 15px; /* Espaço para o ícone */
+    padding: 12px 40px 12px 15px;
     background: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 10px;
