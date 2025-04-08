@@ -1,16 +1,19 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
   event.preventDefault();
   
-  const login = document.getElementById('login').value;
+  const login = document.getElementById('login').value.trim();
   const senha = document.getElementById('senha').value;
 
-  // Verifica se o usuário existe no localStorage
-  const usuarioData = JSON.parse(localStorage.getItem('usuario_' + login));
+  // Carrega todos os usuários salvos no localStorage
+  const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+  
+  // Busca o usuário na array de usuários
+  const usuarioData = usuarios.find(u => u.usuario === login);
   
   if (usuarioData && usuarioData.senha === senha) {
     alert('Sucesso!');
     window.location.href = 'menu.html';
   } else {
-    alert('Usuário ou senha incorretos');
-  }
+    alert('Usuario ou senha incorretos');
+  }
 });
