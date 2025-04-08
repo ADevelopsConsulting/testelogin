@@ -127,3 +127,21 @@ input[type="password"]:focus {
 .cadastro-link a:hover {
     color: #fff;
 }
+
+
+.recuperar-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.recuperar-link a {
+    color: #66bb6a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.recuperar-link a:hover {
+    color: #fff;
+}
