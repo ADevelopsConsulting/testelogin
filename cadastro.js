@@ -56,20 +56,6 @@ document.getElementById('cadastroForm').addEventListener('submit', function(even
     }, 2000); // Aumentei para 2 segundos para dar tempo de ler a mensagem
 });
 
-// Função para alternar visibilidade da senha
-function togglePassword(inputId, element) {
-    const input = document.getElementById(inputId);
-    if (input.type === 'password') {
-        input.type = 'text';
-        element.textContent = '🙈';
-        element.style.color = '#fff';
-    } else {
-        input.type = 'password';
-        element.textContent = '👁️';
-        element.style.color = 'rgba(255, 255, 255, 0.6)';
-    }
-}
-
 // Função para mostrar mensagens de erro ou sucesso
 function mostrarMensagem(texto, sucesso) {
     const mensagem = document.getElementById('mensagem');
