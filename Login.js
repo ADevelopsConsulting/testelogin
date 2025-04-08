@@ -3,7 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
   
   const login = document.getElementById('login').value;
   const senha = document.getElementById('senha').value;
-  
+
   // Verifica se o usuário existe no localStorage
   const usuarioData = JSON.parse(localStorage.getItem('usuario_' + login));
   
