@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro 2025</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="cadastro.css">
 </head>
 <body>
@@ -13,23 +14,40 @@
         <div id="mensagem" class="mensagem"></div>
         <form id="cadastroForm">
             <div class="input-group">
-                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="nome" placeholder="Nome completo" required>
+                <span class="input-icon"><i class="fas fa-user"></i></span>
             </div>
             <div class="input-group">
                 <input type="email" id="email" placeholder="E-mail" required>
+                <span class="input-icon"><i class="fas fa-envelope"></i></span>
             </div>
             <div class="input-group">
-                <input type="text" id="usuario" placeholder="Usuário" required>
+                <input type="text" id="usuario" placeholder="Nome de usuário" required>
+                <span class="input-icon"><i class="fas fa-at"></i></span>
             </div>
             <div class="input-group password-group">
                 <input type="password" id="senha" placeholder="Senha" required>
-                <span class="toggle-password" onclick="togglePassword('senha', this)">👁️</span>
+                <span class="toggle-password" onclick="togglePassword('senha', this)">
+                    <i class="fas fa-eye"></i>
+                </span>
             </div>
             <div class="input-group password-group">
-                <input type="password" id="confirmaSenha" placeholder="Confirmar Senha" required>
-                <span class="toggle-password" onclick="togglePassword('confirmaSenha', this)">👁️</span>
+                <input type="password" id="confirmaSenha" placeholder="Confirmar senha" required>
+                <span class="toggle-password" onclick="togglePassword('confirmaSenha', this)">
+                    <i class="fas fa-eye"></i>
+                </span>
             </div>
-            <button type="submit" class="btn">Cadastrar</button>
+            <div class="senha-requisitos" id="requisitos-senha">
+                <p>A senha deve conter:</p>
+                <ul>
+                    <li id="req-length"><i class="fas fa-circle"></i> Mínimo de 6 caracteres</li>
+                    <li id="req-letter"><i class="fas fa-circle"></i> Pelo menos uma letra</li>
+                    <li id="req-number"><i class="fas fa-circle"></i> Pelo menos um número</li>
+                </ul>
+            </div>
+            <button type="submit" class="btn">
+                <span>Cadastrar</span>
+            </button>
         </form>
         <p class="login-link">Já tem conta? <a href="index.html">Faça login</a></p>
     </div>

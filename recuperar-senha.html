@@ -4,20 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha 2025</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="recuperar-senha.css">
 </head>
 <body>
     <div class="container">
         <h2>Recuperar Senha</h2>
+        <div id="mensagem" class="mensagem"></div>
         <form id="recuperarForm">
             <div class="input-group">
-                <input type="text" id="usuario" placeholder="Usuário" required>
+                <input type="text" id="usuario" placeholder="Nome de usuário" required autofocus>
             </div>
             <div class="input-group">
-                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="email" id="email" placeholder="E-mail cadastrado" required>
             </div>
-            <button type="submit" class="btn">Enviar</button>
+            <button type="submit" class="btn">
+                <span>Enviar código</span>
+            </button>
         </form>
         <p class="login-link">Lembrou a senha? <a href="index.html">Faça login</a></p>
     </div>
